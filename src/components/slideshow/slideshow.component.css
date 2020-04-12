@@ -1,0 +1,88 @@
+.slides-container {
+  position: relative;
+  padding-top: calc(9/16*100%)
+}
+
+.slides-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity ease-in-out .3s;
+}
+.slides-container img.active {
+  z-index: 1;
+  opacity: 1;
+  display: block;
+}
+
+.slideshow-controls {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  background-color: #1a1a1a;
+  margin-bottom: 20px;
+}
+.slideshow-controls .nav-container {
+  display: flex;
+}
+.slideshow-controls .nav-container span {
+  display: inline-block;
+  color: #fff;
+  background-color: #333333;
+  text-align: center;
+  line-height: 30px;
+  width: 60px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+@media screen and (min-width: 767px) {
+  .slideshow-controls {
+    height: 50px;
+    margin-bottom: 50px;
+  }
+
+  .slideshow-controls .nav-container span {
+    line-height: 50px;
+    width: 80px;
+  }
+}
+
+[class*="btn-"] {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url('../../assets/sprites/slideshow-sprite.svg');
+  background-size: 300% 100%;
+  background-position-y: 0;
+}
+[class*="btn-arrow-"] {
+  background-color: #4d4d4d;
+}
+[class*="btn-arrow-"]:hover, .btn-fullscreen:hover {
+  background-color: #c1272d;
+}
+.btn-arrow-previous {
+  background-position-x: 0;
+}
+.btn-arrow-next {
+  background-position-x: -100%;
+}
+.btn-fullscreen {
+  background-position-x: -200%;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 767px) {
+  [class*="btn-"] {
+    width: 50px;
+    height: 50px;
+  }
+}

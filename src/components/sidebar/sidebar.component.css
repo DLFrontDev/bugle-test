@@ -1,0 +1,124 @@
+:host {
+  flex-shrink: 0;
+  flex-basis: 25%;
+}
+
+.sidebar-container {
+  box-sizing: border-box;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  border-right: 3px solid #c1272d;
+}
+
+@media screen and (min-width: 1200px) {
+  :host {
+    flex-basis: 15%;
+  }
+
+  .sidebar-container {
+    width: 15%;
+  }
+}
+
+menu {
+  padding: 0;
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #c1272d;
+}
+
+.logo-container h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 767px) {
+  .logo-container {
+    flex-direction: row;
+  }
+
+  .logo-container h3 {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+.logo-container a {
+  display: block;
+  padding: 10px 15px 15px;
+  border-bottom-right-radius: 50px;
+  background-color: #333333;
+}
+.logo-container a img {
+  display: block;
+}
+
+.sidebar-controls {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+.sidebar-controls a {
+  position: relative;
+  display: inline-block;
+  color: #1a1a1a;
+  font-size: 1rem;
+  text-decoration: none;
+  padding-left: 28px;
+  line-height: 22px;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.sidebar-controls a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: block;
+  background-image: url('../../assets/sprites/overview-sprite.svg');
+  background-size: 200% 600%;
+  background-position-x: 0;
+  width: 18px;
+  height: 18px;
+}
+.sidebar-controls a:hover {
+  color: #0071bc;
+}
+.sidebar-controls a:hover:before {
+  background-position-x: -100%;
+}
+.sidebar-controls a.edit-control:before {
+  background-position-y: 0;
+}
+.sidebar-controls a.publish-control:before {
+  background-position-y: -100%;
+}
+.sidebar-controls a.delete-control:before {
+  background-position-y: -200%;
+}
+
+@media screen and (min-width: 1200px) {
+  .sidebar-controls {
+    padding: 20px;
+  }
+
+  .sidebar-controls a {
+    font-size: 1.4rem;
+    padding-left: 40px;
+    line-height: 30px;
+  }
+
+  .sidebar-controls a:before {
+    width: 30px;
+    height: 30px;
+  }
+}

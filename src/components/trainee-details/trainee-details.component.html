@@ -1,0 +1,14 @@
+<div class="avatar-container">
+  <img src="./assets/avatars/{{trainee.avatar}}" [alt]="trainee.name + ' avatar'">
+</div>
+<div class="info-container">
+  <div class="info-wrap">
+    <p>{{trainee.name}}</p>
+    <p>{{trainee.email}}</p>
+  </div>
+  <div class="controls-wrap">
+    <button type="button" role="button" class="btn-email"></button>
+    <button type="button" role="button" class="btn-absent" *ngIf="!trainee.attended"></button>
+    <button type="button" role="button" class="btn-attended" *ngIf="trainee.attended"></button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.course-title {
+  margin-bottom: 20px;
+  border-bottom: 3px solid #c1272d;
+}
+
+@media screen and (min-width: 767px) {
+  .course-title {
+    margin-bottom: 50px;
+  }
+}
+
+.quiz-container, .topics-container {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 767px) {
+  .quiz-container, .topics-container {
+    margin-bottom: 50px;
+  }
+}
+
+.topics-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+.topics-container ul li {
+  font-size: 1rem;
+}
+
+.quiz-container button {
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.quiz-container button:hover {
+  color: #0071bc;
+}

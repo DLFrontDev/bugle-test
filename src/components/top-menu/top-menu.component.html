@@ -1,0 +1,10 @@
+<menu [ngClass]="isActive ? 'menu-open' : 'menu-closed'">
+  <div class="menu-container">
+    <a href="#" class="btn-home">Home</a>
+    <a href="#" class="btn-dashboard">Dashboard</a>
+    <a href="#" class="btn-signout">Sign out</a>
+  </div>
+
+  <!-- Special animated hamburger :) -->
+  <button type="button" role="button" class="btn-toggle-menu" (click)="toggleActive()"><span></span></button>
+</menu>

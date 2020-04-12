@@ -1,0 +1,135 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+:host:after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  box-sizing: border-box;
+  content: '';
+  background-clip: content-box;
+  padding-left: 50px;
+  width: 100%;
+  height: 2px;
+  background-color: #4d4d4d;
+}
+
+@media screen and (min-width: 767px) {
+  :host {
+    padding: 20px 0;
+  }
+
+  :host:after {
+    padding-left: 80px;
+  }
+}
+
+.avatar-container {
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.avatar-container img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+  .avatar-container {
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.info-container {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-wrap {
+  display: flex;
+  flex-flow: column;
+}
+
+.info-wrap p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  font-size: 1rem;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+@media screen and (min-width: 767px) {
+  .info-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info-container p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .info-wrap {
+    flex-grow: 1;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+
+.controls-wrap {
+  flex-shrink: 0;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url('../../assets/sprites/overview-sprite.svg');
+  background-size: 200% 600%;
+}
+button + button {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  button {
+    width: 40px;
+    height: 40px;
+  }
+  button + button {
+    margin-left: 20px;
+  }
+}
+
+button:hover:not(.btn-absent) {
+  background-position-x: -100%;
+}
+button.btn-email {
+  background-position-y: -400%;
+}
+button.btn-absent {
+  cursor: auto;
+  background-position-y: -500%;
+}
+button.btn-attended {
+  background-position-y: -300%;
+}

@@ -1,0 +1,11 @@
+<div class="slides-container">
+  <img src="./assets/slideshow/{{slide.path}}" *ngFor="let slide of slideshow; let i=index; " [class]="i === currentSlide ? 'active' : ''" alt="{{slide.alt}}">
+</div>
+<div class="slideshow-controls">
+  <div class="nav-container">
+    <button type="button" name="button" class="btn-arrow-previous" (click)="changeSlide(-1)"></button>
+    <button type="button" name="button" class="btn-arrow-next" (click)="changeSlide(1)"></button>
+    <span>{{currentSlide+1}}/{{slideshow.length}}</span>
+  </div>
+  <button type="button" name="button" class="btn-fullscreen"></button>
+</div>

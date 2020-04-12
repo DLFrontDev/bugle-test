@@ -1,0 +1,13 @@
+<menu class="sidebar-container">
+  <div class="logo-container">
+    <a href="#" class="logo" alt="company-logo">
+      <img src="./assets/logo.svg" alt="">
+    </a>
+    <h3>GeoForm<br />The future<br />today</h3>
+  </div>
+  <ul class="sidebar-controls">
+    <li *ngFor="let control of controls">
+      <a href="#" [class]="control + '-control'">{{control}}</a>
+    </li>
+  </ul>
+</menu>

@@ -1,0 +1,24 @@
+<h4>Enrolled Trainees</h4>
+<h5>Total enrolled: {{trainees.length}}</h5>
+<div class="data-bar">
+  <span *ngIf="attended>0">Attended</span>
+  <div class="bar-container">
+    <div *ngIf="attended>0" [style.width]="100/trainees.length*attended +'%'">{{attended}}</div>
+    <div *ngIf="absent>0" [style.width]="100/trainees.length*absent +'%'">{{absent}}</div>
+  </div>
+  <span *ngIf="absent>0">Absent</span>
+</div>
+<div class="data-bar">
+  <span *ngIf="passed>0">Passed</span>
+  <div class="bar-container">
+    <div *ngIf="passed>0" [style.width]="100/attended*passed +'%'">{{passed}}</div>
+    <div *ngIf="failed>0" [style.width]="100/attended*failed +'%'">{{failed}}</div>
+  </div>
+  <span *ngIf="failed>0">Failed</span>
+</div>
+<ul class="trainees-list" [ngClass]="isExpanded ? 'expanded' : ''">
+  <li *ngFor="let trainee of trainees">
+    <trainee-details [trainee]="trainee"></trainee-details>
+  </li>
+</ul>
+<button class="filter-trainees" (click)="expandList()" *ngIf="!isExpanded">View all enrolled trainees</button>
