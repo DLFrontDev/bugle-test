@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "buggle-test": {
+    "bugle-test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/buggle-test",
+            "outputPath": "dist/bugle-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "buggle-test:build"
+            "browserTarget": "bugle-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "buggle-test:build:production"
+              "browserTarget": "bugle-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "buggle-test:build"
+            "browserTarget": "bugle-test:build"
           }
         },
         "test": {
@@ -106,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "buggle-test:serve"
+            "devServerTarget": "bugle-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "buggle-test:serve:production"
+              "devServerTarget": "bugle-test:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "buggle-test"
+  "defaultProject": "bugle-test"
 }

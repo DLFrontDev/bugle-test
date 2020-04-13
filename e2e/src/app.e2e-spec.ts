@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('buggle-test app is running!');
+    expect(page.getTitleText()).toEqual('bugle-test app is running!');
   });
 
   afterEach(async () => {
