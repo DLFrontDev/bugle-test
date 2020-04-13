@@ -10,6 +10,13 @@
 
 @media screen and (min-width: 767px) {
   :host {
+    width: 75%;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :host {
     width: 85%;
     justify-content: flex-start;
   }
@@ -65,6 +72,7 @@ menu.menu-open .menu-container {
   text-transform: uppercase;
   font-weight: 700;
   padding-left: 25px;
+  word-break: break-all;
 }
 .menu-container a:not(:last-child) {
   margin-right: 15px;
@@ -114,7 +122,7 @@ menu.menu-open .menu-container {
   }
 }
 
-.btn-toggle-menu {
+button.btn-toggle-menu {
   height: 20px;
   width: 20px;
   border: none;
@@ -122,14 +130,15 @@ menu.menu-open .menu-container {
   background: none;
   outline: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
-.btn-toggle-menu:hover:before,
-.btn-toggle-menu:hover:after,
-.btn-toggle-menu:hover span {
+button.btn-toggle-menu:hover:before,
+button.btn-toggle-menu:hover:after,
+button.btn-toggle-menu:hover span {
   background-color: #1a1a1a;
 }
-.btn-toggle-menu:before,
-.btn-toggle-menu:after {
+button.btn-toggle-menu:before,
+button.btn-toggle-menu:after {
   transform-origin: center left;
   content: '';
   display: block;
@@ -137,45 +146,45 @@ menu.menu-open .menu-container {
   width: 100%;
   height: 4px;
 }
-.btn-toggle-menu span {
+button.btn-toggle-menu span {
   display: block;
   width: 100%;
   height: 4px;
   margin: 4px 0;
   background-color: #fff;
 }
-.btn-toggle-menu:before, .btn-toggle-menu:after, .btn-toggle-menu span {
+button.btn-toggle-menu:before, button.btn-toggle-menu:after, button.btn-toggle-menu span {
   transition: all ease-in-out .2s;
 }
 
-menu.menu-open .menu-container + .btn-toggle-menu span {
+menu.menu-open .menu-container + button.btn-toggle-menu span {
   opacity: 0;
 }
-menu.menu-open .menu-container + .btn-toggle-menu:before {
+menu.menu-open .menu-container + button.btn-toggle-menu:before {
   transform: rotate(45deg) scale(1.15);
 }
-menu.menu-open .menu-container + .btn-toggle-menu:after {
+menu.menu-open .menu-container + button.btn-toggle-menu:after {
   transform: rotate(-45deg) scale(1.15);
 }
 
 @media screen and (min-width: 767px) {
-  .btn-toggle-menu {
+  button.btn-toggle-menu {
     height: 30px;
     width: 30px;
   }
 
-  .btn-toggle-menu span {
+  button.btn-toggle-menu span {
     margin: 6px 0;
   }
 
-  menu.menu-open .menu-container + .btn-toggle-menu span {
+  menu.menu-open .menu-container + button.btn-toggle-menu span {
     margin: 9px 0;
   }
 
-  menu.menu-open .menu-container + .btn-toggle-menu:before {
+  menu.menu-open .menu-container + button.btn-toggle-menu:before {
     transform: rotate(45deg) scale(1.25);
   }
-  menu.menu-open .menu-container + .btn-toggle-menu:after {
+  menu.menu-open .menu-container + button.btn-toggle-menu:after {
     transform: rotate(-45deg) scale(1.25);
   }
 }

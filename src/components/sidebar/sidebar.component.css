@@ -78,6 +78,7 @@ menu {
   line-height: 22px;
   text-transform: capitalize;
   margin-bottom: 1rem;
+  word-break: break-all;
 }
 .sidebar-controls a:before {
   content: '';
